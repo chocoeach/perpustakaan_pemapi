@@ -10,5 +10,10 @@ class Book extends Model
     use HasFactory;
 
     protected $table = 'books';
-    protected $fillable = ['title', 'author', 'publisher', 'tanggal_terbit'];
+
+    // Menonaktifkan timestamps
+    public $timestamps = false;
+
+    // Menentukan kolom yang bisa diisi
+    protected $fillable = ['title', 'author', 'book_image'];
 }
